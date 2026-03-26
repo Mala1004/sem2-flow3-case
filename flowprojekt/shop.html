@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="nyshop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crimson Pro"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("ED_7nGdcX-ZZycTiI"); //
+      })();
+    </script>
+  </head>
+  <body>
+    <!------------------>
+    <!-- Topnav -->
+    <header class="header-nav">
+      <a href="index.html">
+        <div class="logo"><img src="img/logo/Logo 1.png" alt="" /></div>
+      </a>
+      <button id="menuBtn">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
+      </button>
+      <nav class="offcanvas" id="offcanvasMenu">
+        <button id="closeBtn">x</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="omos.html">About</a></li>
+          <li><a href="kontakt.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="overlay"></div>
+
+    <!-- Side-layout -->
+    <div class="page-layout">
+      <!-- VENSTRE SIDE: shop-indhold + products -->
+      <div class="left-content">
+        <div class="shop-indhold">
+          <h1 class="shop-header">Our Styles</h1>
+          <h3 class="prod-header1">Dress shirts</h3>
+          <div class="prod-photo1">
+            <img src="img/products/dress/blue/blue-front.webp" alt="" />
+          </div>
+          <p class="prod-tekst1">
+            A refined essential with a sharp silhouette and clean finish.
+          </p>
+          <h3 class="prod-header2">Oxford shirts</h3>
+          <div class="prod-photo2">
+            <img src="img/products/oxford/green/green-front.webp" alt="" />
+          </div>
+          <p class="prod-tekst2">
+            A timeless staple with a slightly more relaxed feel.
+          </p>
+          <h3 class="prod-header3">Cuban shirts</h3>
+          <div class="prod-photo3">
+            <img src="img/products/cuban/navy/navy-front.webp" alt="" />
+          </div>
+          <p class="prod-tekst3">
+            A short-sleeved shirt defined by its open, wide collar.
+          </p>
+        </div>
+
+        <div class="products-list">
+          <!--INDSÆTTER PRODUKTER HER-->
+          <div class="products"></div>
+        </div>
+      </div>
+
+      <!-- HØJRE SIDE: shopping-bag + cart -->
+      <div class="right-content">
+        <div class="app-container">
+          <div class="app-bg">
+            <div class="left-side"></div>
+            <div class="bg-right"></div>
+          </div>
+          <!-- Header med bag -->
+          <header class="header-fra-tutorial">
+            <div class="shopping-bag">
+              <a href="./cart.html">
+                <p>Cart</p>
+                <div class="total-items-in-cart">0</div>
+              </a>
+            </div>
+          </header>
+
+          <div class="cart">
+            <div class="cart-items"></div>
+            <!--INDSÆTTER CART ITEMS HER-->
+            <div class="cart-footer">
+              <div class="subtotal">Subtotal (0 items): $0</div>
+              <input
+                type="email"
+                id="email"
+                placeholder="your@email-here.com"
+                required
+              />
+              <div class="checkout">Proceed to checkout</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="styleshop.js"></script>
+  </body>
+</html>

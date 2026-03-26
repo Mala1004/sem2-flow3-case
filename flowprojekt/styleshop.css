@@ -1,0 +1,382 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Crimson Pro";
+  font-size: 22px;
+  position: relative;
+}
+h1 {
+  justify-self: center;
+  color: #21369c;
+}
+/*Topnav*/
+header {
+  background-color: #ffdd9d;
+  height: 200px;
+  position: relative;
+}
+/*Logo*/
+.logo img {
+  max-width: 300px;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Design af menu */
+.box {
+  width: 120px; /* boksens bredde */
+  height: 120px; /* boksens højde */
+  background: steelblue; /* farve på boksen */
+  transition: transform 0.5s; /* gør animationen glidende */
+}
+/*hamburger + luk  knap*/
+#menuBtn {
+  padding: 10px 16px;
+  margin: 20px;
+  cursor: pointer;
+  background-color: #ffdd9d;
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  border-style: none;
+}
+#closeBtn {
+  padding: 10px 16px;
+  margin: 20px;
+  cursor: pointer;
+  background-color: #21369c;
+  color: white;
+  font-size: 45px;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  border-style: none;
+}
+/*Hamburger knap*/
+.burger {
+  width: 35px;
+  height: 5px;
+  background-color: #21369c;
+  margin: 6px 0;
+}
+
+/*Offcanvas menu - rykket til højre*/
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 100vh;
+  background: #21369c;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+/*Aktiverer menuen*/
+.offcanvas.open {
+  transform: translateX(0);
+}
+/*Menu indhold*/
+.offcanvas ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 100px;
+  font-size: 50px;
+}
+/*Afstand mellem menu punkter*/
+.offcanvas li {
+  margin-bottom: 50px;
+}
+/*Menupunkter tekst*/
+.offcanvas a {
+  color: white;
+  text-decoration: none;
+}
+/*Overlay, når menuen er aktiv*/
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+}
+/* når overlayet er aktivt */
+.overlay.show {
+  display: flex;
+}
+.offcanvas {
+  z-index: 1000;
+}
+
+.overlay {
+  z-index: 999;
+}
+
+/*Forside - Indhold*/
+.index-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  padding: 25px;
+  position: relative;
+}
+body {
+  background-color: rgb(248, 240, 240);
+}
+.forside-tekst {
+  grid-column: 1/2;
+  font-style: italic;
+}
+.forside-tekst a {
+  font-style: normal;
+  font-size: x-large;
+}
+.hero img {
+  width: 1000px;
+  height: auto;
+  display: block;
+}
+.hero {
+  grid-column: 2/5;
+}
+
+.shop-link {
+  text-decoration: none;
+  color: #21369c;
+  font-weight: 900;
+}
+
+/*Shop indhold*/
+.shop-indhold {
+  display: grid;
+  gap: 25px;
+  padding: 10px;
+  grid-template-areas: 
+  /*"tegner" indholdet, som det skal fylde på siden*/
+    "heading1 heading2 heading3"
+    "heading4 heading5 heading6"
+    "header1 header2 header3"
+    "photo1 photo2 photo3"
+    "describ1 describ2 describ3";
+}
+.shop-indhold h3 {
+  font-weight: 300;
+}
+.shop-indhold p {
+  font-style: italic;
+}
+.shop-indhold img {
+  max-width: 100%;
+  max-height: 400px;
+}
+.shop-header {
+  grid-area: heading2;
+}
+
+.prod-header1 {
+  grid-area: header1;
+}
+.prod-photo1 {
+  grid-area: photo1;
+}
+.prod-tekst1 {
+  grid-area: describ1;
+}
+.prod-header2 {
+  grid-area: header2;
+}
+.prod-photo2 {
+  grid-area: photo2;
+}
+.prod-tekst2 {
+  grid-area: describ2;
+}
+.prod-header3 {
+  grid-area: header3;
+}
+.prod-photo3 {
+  grid-area: photo3;
+}
+.prod-tekst3 {
+  grid-area: describ3;
+}
+/*Produkter*/
+.shop-produkter {
+  display: grid;
+  padding: 10px;
+  grid-template-areas:
+    "heading1 heading1 heading1 heading1"
+    "heading2 heading2 heading2 heading2"
+    "prod-pic1 prod-pic2 prod-pic3 prod-pic4"
+    "prod-head1 prod-head2 prod-head3 prod-head4"
+    "heading3 heading3 heading3 heading3"
+    "prod-pic5 prod-pic6 prod-pic7 prod-pic8"
+    "prod-head5 prod-head6 prod-head7 prod-head8"
+    "heading4 heading4 heading4 heading4"
+    "prod-pic9 prod-pic10 prod-pic11 prod-pic12"
+    "prod-head9 prod-head10 prod-head11 prod-head12";
+}
+.shop-produkter img {
+  max-width: 100%;
+  max-height: 300px;
+}
+.style-heading1,
+.style-heading2,
+.style-heading3 {
+  color: #21369c;
+  margin-top: 80px;
+  margin-bottom: 25px;
+}
+
+.shop-heading {
+  margin-top: 60px;
+}
+
+.shop-heading {
+  grid-area: heading1;
+}
+.style-heading1 {
+  grid-area: heading2;
+}
+.dress-blue-header {
+  grid-area: prod-head1;
+}
+.dress-blue-img {
+  grid-area: prod-pic1;
+}
+.dress-white-heading {
+  grid-area: prod-head2;
+}
+.dress-white-img {
+  grid-area: prod-pic2;
+}
+.dress-green-headding {
+  grid-area: prod-head3;
+}
+.dress-green-img {
+  grid-area: prod-pic3;
+}
+.dress-navy-heading {
+  grid-area: prod-head4;
+}
+.dress-navy-img {
+  grid-area: prod-pic4;
+}
+.style-heading2 {
+  grid-area: heading3;
+}
+.ox-blue-heading {
+  grid-area: prod-head5;
+}
+.ox-blue-img {
+  grid-area: prod-pic5;
+}
+.ox-white-heading {
+  grid-area: prod-head6;
+}
+.ox-white-img {
+  grid-area: prod-pic6;
+}
+.ox-green-heading {
+  grid-area: prod-head7;
+}
+.ox-green-img {
+  grid-area: prod-pic7;
+}
+.ox-navy-heading {
+  grid-area: prod-head8;
+}
+.ox-navy-img {
+  grid-area: prod-pic8;
+}
+.style-heading3 {
+  grid-area: heading4;
+}
+.cub-blue-heading {
+  grid-area: prod-head9;
+}
+.cub-blue-img {
+  grid-area: prod-pic9;
+}
+.cub-white-heading {
+  grid-area: prod-head10;
+}
+.cub-white-img {
+  grid-area: prod-pic10;
+}
+.cub-green-heading {
+  grid-area: prod-head11;
+}
+.cub-green-img {
+  grid-area: prod-pic11;
+}
+.cub-navy-heading {
+  grid-area: prod-head12;
+}
+.cub-navy-img {
+  grid-area: prod-pic12;
+}
+
+/*Kontakt stylling*/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.formularen {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.kontakt-p {
+  width: 700px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/*Om os stylling*/
+.tekst-om-div {
+  display: block;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.om-os-tekst {
+}
+.faq {
+  width: 500px;
+
+  background-color: #ffdd9d;
+  padding: 25px;
+  margin: 25px;
+}
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.answer.show {
+  max-height: 200px;
+  font-size: 18px;
+}
+.om-os-indhold {
+  display: flex;
+  justify-content: center;
+}
+#question1,
+#question2,
+#question3,
+#question4 {
+  font-size: 18px;
+}
