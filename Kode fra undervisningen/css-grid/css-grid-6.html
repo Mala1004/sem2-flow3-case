@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Grid Øvelser 6</title>
+   <style>
+
+.kasse {
+  background: rgb(160, 204, 71);
+  padding: 10px;
+  color: white;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+   .container {
+  background: #ccc;
+  padding: 10px;
+  
+  /*Gør elementet til et grid*/
+  display: grid;
+
+  /*Giver mulighed for at definere specifikke områder*/
+ grid-template-areas: 
+  /*"tegner" indholdet, som det skal fylde på siden*/
+        "logo nav nav nav"
+        "content content banner1 banner1"
+        "content content banner2 banner2"
+        "footer footer footer footer";
+       
+
+  /*Skaber gutter mellem kollonerne*/
+  gap: 20px;
+}
+/*Placerer elementerne på den placering der er defineret i "grid-templates-areas"*/
+.one{
+grid-area: logo;
+}
+.two{
+    grid-area: nav;
+}
+.three{
+  grid-area: content;
+}
+.four{
+    grid-area: banner1;
+}
+.five{
+  grid-area: banner2;
+}
+.six{  
+  grid-area: footer;
+}
+
+/*Giver mulighed for at "tegne" et nyt grid, til skærme under 900px*/
+@media screen and (max-width: 900px){
+.container{
+  grid-template-areas: 
+      "logo"
+      "nav"
+      "banner1"
+      "content"
+      "banner2"
+      "footer"
+  ;
+}}
+  
+
+/**/
+</style>
+  </head>
+
+
+  <body>
+       <div class="container">
+      <div class="kasse one">1</div>
+      <div class="kasse two">2</div>
+      <div class="kasse three">3</div>
+      <div class="kasse four">4</div>
+      <div class="kasse five">5</div>
+       <div class="kasse six">6</div>
+ 
+    
+    </div>
+  </body>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*Rammer alle billeder, og sørger for at de er responsive, ved at fylde hele den div, de er i*/
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+body {
+  /*Gør body til flexbox*/
+  display: flex;
+  /*Placerer indhold vandret-centreret*/
+  justify-content: center;
+  /*Placerer indhold 100px fra toppen*/
+  margin-top: 100px;
+}
+.slideshow-container {
+  /*Sørger for at indholdet max er 1000px bredt, men det kan godt blive mindre*/
+  max-width: 1000px;
+  /*Sætter op til grid*/
+  display: grid;
+  /*Definerer kun et enkelt area, så alle fotos med "slide", står ovenpå hinanden*/
+  grid-template-areas: "slide";
+  /*Giver container runde hjørner*/
+  border-radius: 20px;
+  /*Skjuler indhold, der går ud over boksen - håndhæver derfor border-radius*/
+  overflow: hidden;
+  /*Giver mulighed for at placere pilene, relativt til containeren*/
+  position: relative;
+}
+.slide {
+  /*Placerer alle fotos ovenpå hinanden, i det area der hedder "slide"*/
+  grid-area: slide;
+  /* /*Giver mulighed for at have teksten ovenpå billedet, det hører til*/
+  position: relative;
+  /*Sørger for at forandringer, altså foto skift, sker over 0.5 sekunder*/
+  transition: 0.5s ease;
+}
+.caption {
+  /*Giver mulighed for at have teksten ovenpå billedet, det hører til,
+    fordi det er relativt til billedet*/
+  position: absolute;
+  /*Placerer teksten 20 px fra bunden, af det element der er relativt*/
+  bottom: 20px;
+  left: 20px;
+  color: rgba(255, 255, 255, 0.807);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+.previous,
+.next {
+  /*Giver placering ovenpå billedet, fordi slideshow-container er relativ*/
+  position: absolute;
+  /*Placerer 50% fra toppen af billedet*/
+  top: 50%;
+  /*Fratrækker halvedelen af font størrelsen, for at det er præcist i midten*/
+  margin-top: -25px;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.772);
+  /*Giver en "hånd", når pilen er over*/
+  cursor: pointer;
+  /*Sørger for at forandringer, altså hover, sker over 0.5 sekunder*/
+  transition: 0.5s ease;
+}
+.next {
+  /*Placerer til højre*/
+  right: 20px;
+}
+.previous {
+  /*Placerer til venstre*/
+  left: 20px;
+}
+/*Gør pilene hvide, når musen hover over*/
+.previous:hover,
+.next:hover {
+  color: white;
+}
+/**/

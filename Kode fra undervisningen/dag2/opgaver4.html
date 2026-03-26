@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opgaver 4</title>
+  </head>
+  <body>
+    <h2>Shopping Cart Total</h2>
+
+    <label for="price1">Product 1 price</label>
+    <input id="price1" type="number" placeholder="Enter price" />
+
+    <label for="price2">Product 2 price</label>
+    <input id="price2" type="number" placeholder="Enter price" />
+
+    <button id="calculateButton">Calculate total</button>
+
+    <p>Total: <span id="total">0</span>kr</p>
+  </body>
+
+  <script>
+    document
+      .getElementById("calculateButton")
+      .addEventListener("click", function () {
+        const x = document.getElementById("price1").value;
+        const y = document.getElementById("price2").value;
+        const z = Number(x) + Number(y);
+        document.getElementById("total").innerHTML = z;
+      });
+  </script>
+</html>

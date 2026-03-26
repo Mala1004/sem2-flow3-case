@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opgave 1</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+      }
+      .infobox {
+        width: 300px;
+        padding: 20px;
+        margin-top: 20px;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        display: none;
+      }
+
+      .infobox.show {
+        display: block;
+        button {
+          padding: 10px 14px;
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="infoBtn">Vis information</button>
+    <div class="infobox" id="infobox">
+      <p>Dette er en infoboks med ekstra information.</p>
+      <button id="closeBtn">Luk</button>
+    </div>
+  </body>
+
+  <script>
+    document.querySelectorAll("img").addEventListener("click", function () {
+      document.querySelector(".infobox").classList.add("show");
+    });
+    document.querySelector("#closeBtn").addEventListener("click", function () {
+      document.querySelector(".infobox").classList.remove("show");
+    });
+  </script>
+</html>

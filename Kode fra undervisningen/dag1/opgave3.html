@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opgave 3</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+      }
+      .card {
+        width: 250px;
+        padding: 20px;
+        background: #f4f4f4;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card" id="infoCard">
+      <p id="cardText">Klik for at se mere</p>
+    </div>
+  </body>
+
+  <script>
+    const card = document.querySelector("#infoCard");
+    const cardText = document.querySelector("#cardText");
+    card.addEventListener("click", function () {
+      card.style.background = "#d9f2ff";
+      document.getElementById("cardText").innerHTML = "Jeg er færdig";
+    });
+  </script>
+</html>

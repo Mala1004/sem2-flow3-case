@@ -1,0 +1,17 @@
+.hidden {
+  display: none;
+}
+
+.liked {
+  color: red;
+  font-weight: bold;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
+
+.done {
+  text-decoration: line-through;
+}

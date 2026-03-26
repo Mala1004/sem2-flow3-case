@@ -1,0 +1,30 @@
+- css-grid: Fleksibelt og responsivt layout
+
+- flexbox recap: Opfrisk af flexbox til layout
+
+- Javascript dag 1:
+  - offcanvas: Menu/element, der bliver åbnet af en knap
+  - index: Knap der kan trigge animation. (I dette tilfælde flytte en box frem og tilbage)
+  - Opgave 1: Knap der åbner en infobox, med ekstra information samt en luk knap.
+  - Opgave 2: Knap der trigger, at tekst ændrer sig. (Besked ikke gemt - besked gemt)
+  - Opgave 3: En box man kan klikke på, der så ændrer indhold samt baggrundsfarve
+
+- Javascript dag 2:
+  - Index: Todo "app" + Click counter + Like button (knap der skifter farve) + Show more knap + Quiz + Arrays (teacher1+teacher2)
+  - Opgaver: Knap der kan ændre indhold af tekst + Knap der skjuler tekst + Change background knap (knap der skifter en class)
+  - Opgaver 2: Click counter +/- (knapper der kan plusse og minusse)
+  - Opgaver 3: Character counter (Tæller antal af anslag, i et inputbox)
+  - Opgaver 4: Funktion der lægger to priser fra inputbox sammen, når man trykker på en knap
+
+- Javascript dag 3:
+  - According: Harmonika menu, der kan folde spørgsmål og svar ud og ind
+  - Dark: Kan ændre hele sitets farve, samt skifte billede, når der trykkes på en knap.
+  - Overlay: Knap der aktiverer et overlay, samt en alert der lukker både overlay og alert
+  - Trafficlight: Kanp der bruger if/else til at skifte lys fra rød til gul til grøn til tød osv.
+
+- Javascript dag 4:
+  - dag4: Arrays og objects. Giver mulighed for at "printe", forskellige informationer om et objekt.
+
+- Javascript dag 5:
+  - Kontakt: En formular, der kan bruges til at sende en mail
+  - Slideshow: Et slideshow, der kan skifte imellem et uspecificeret antal af billeder.

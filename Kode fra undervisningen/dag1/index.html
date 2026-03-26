@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interaktiv frontend-udvikling</title>
+    <style>
+      /* Design af boksen */
+      .box {
+        width: 120px; /* boksens bredde */
+        height: 120px; /* boksens højde */
+        background: steelblue; /* farve på boksen */
+        transition: transform 0.3s; /* gør animationen glidende */
+      }
+
+      .box.active {
+        transform: translateX(80px); /* flytter boksen 80px mod
+højre */
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="animation">Klik mig</button>
+    <button id="reset">Reset</button>
+    <button id="toggle">Toggle</button>
+    <div class="box">Hello world</div>
+  </body>
+
+  <script>
+    document.querySelector("#animation").addEventListener("click", function () {
+      document.querySelector(".box").classList.add("active");
+    });
+
+    document.querySelector("#reset").addEventListener("click", function () {
+      document.querySelector(".box").classList.remove("active");
+    });
+    document.querySelector("#toggle").addEventListener("click", function () {
+      document.querySelector(".box").classList.toggle("active");
+    });
+
+    console.log("Hello world");
+  </script>
+</html>

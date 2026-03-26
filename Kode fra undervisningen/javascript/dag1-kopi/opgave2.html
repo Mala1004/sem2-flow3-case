@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opgave 2</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 40px;
+      }
+      button {
+        padding: 10px 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Besked</h2>
+
+    <p id="statusText">Din besked er ikke gemt endnu.</p>
+    <button id="saveBtn">Gem</button>
+  </body>
+
+  <script>
+    const saveBtn = document.querySelector("#saveBtn");
+    const statusText = document.querySelector("#statusText");
+    saveBtn.addEventListener("click", function () {
+      document.getElementById("statusText").innerHTML = "Din besked er gemt!";
+    });
+  </script>
+</html>

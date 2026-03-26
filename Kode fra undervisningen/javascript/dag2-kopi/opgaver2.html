@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opgaver 2</title>
+  </head>
+  <body>
+    <!--Opgave 4-->
+    <p>Clicks: <span id="count">0</span></p>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+  </body>
+  <script>
+    //--Opgave 4--
+
+    // -----PLUS MINUS-----
+
+    // Funktion ved navn "handleClickPlus", der plusser tallet med 1, når der klikkes.
+    function handleClickPlus() {
+      const count = document.getElementById("count").textContent;
+      const newCount = Number(count) + 1;
+
+      document.getElementById("count").textContent = newCount;
+    }
+    //Rammer knappen  //Lytter efter klik, og aktiverer "handleClick"
+    document.getElementById("plus").addEventListener("click", handleClickPlus);
+
+    // Funktion ved navn "handleClickMinus", der plusser minusser med 1, når der klikkes.
+    function handleClickMinus() {
+      const count = document.getElementById("count").textContent;
+      const newCount = Number(count) - 1;
+
+      document.getElementById("count").textContent = newCount;
+    }
+    //Rammer knappen  //Lytter efter klik, og aktiverer "handleClick"
+    document
+      .getElementById("minus")
+      .addEventListener("click", handleClickMinus);
+  </script>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Interaktiv frontend-udvikling - Overlay</title>
+    <style>
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+
+        display: none;
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      .overlay-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+      }
+
+      /* når overlayet er aktivt */
+      .overlay.show {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="openOverlay">Åbn overlay</button>
+
+    <div class="overlay">
+      <div class="overlay-content">
+        <h2>Hej med dig</h2>
+        <p>Dette er et overlay</p>
+        <button id="closeOverlay">Luk</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    document
+      .getElementById("openOverlay")
+      .addEventListener("click", function () {
+        document.querySelector(".overlay").classList.add("show");
+      });
+    document
+      .getElementById("closeOverlay")
+      .addEventListener("click", function () {
+        document.querySelector(".overlay").classList.remove("show");
+      });
+  </script>
+</html>

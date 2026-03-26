@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      :root {
+        --bg: white;
+        --text: #a9c6fd;
+      }
+
+      .dark-mode {
+        --bg: #121212;
+        --text: #f5f5f5;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .image {
+        background-image: url(img/skywalker.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 500px;
+        height: 400px;
+      }
+
+      .dark-mode .image {
+        background-image: url(img/Darth-Vader.png);
+      }
+
+      .light,
+      .dark-mode .dark {
+        visibility: visible;
+        display: block;
+      }
+
+      .dark-mode .light,
+      .dark {
+        display: none;
+        visibility: hidden;
+      }
+    </style>
+    <title>Your Star wars alliance!</title>
+  </head>
+  <body>
+    <section class="wrappe">
+      <button id="themeToggle">Your alliance</button>
+      <main>
+        <h1>Your Star wars alliance!</h1>
+        <h2 class="tagline light">
+          <i>You are turning to the ligth side...</i>
+        </h2>
+        <h2 class="tagline dark"><i>You are turning to the dark side...</i></h2>
+        <section class="image"></section>
+      </main>
+    </section>
+  </body>
+  <script>
+    document
+      .querySelector("#themeToggle")
+      .addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+      });
+  </script>
+</html>
